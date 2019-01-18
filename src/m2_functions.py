@@ -3,11 +3,11 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Drew Roberts.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -18,9 +18,13 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
-
+window = rg.TurtleWindow()
 
 def main():
+    answer = pyth(3, 4)
+    print(answer)
+    Drew('green', 5)
+    Carl('green', 5)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -28,7 +32,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -36,12 +40,16 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+#
+import math
 
-
+def pyth(a, b):
+    c = math.sqrt(a ** 2 + b ** 2)
+    return c
 ###############################################################################
 # TODO: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
@@ -71,6 +79,19 @@ def main():
 ###############################################################################
 
 
+def Drew(a, b):
+    jacey = rg.SimpleTurtle('turtle')
+    jacey.pen = rg.Pen(a, 5)
+    jacey.forward(100)
+    return jacey
+
+def Carl(a, b):
+    emma = rg.SimpleTurtle('turtle')
+    emma.pen = rg.Pen('blue', b)
+    emma.backward(100)
+    return emma
+
+
 ###############################################################################
 # TODO: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
@@ -97,3 +118,4 @@ def main():
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+window.close_on_mouse_click()
