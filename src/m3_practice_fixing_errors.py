@@ -54,22 +54,23 @@ def turtle_fun():
     constructs a classic SimpleTurtle and asks it to do some things,
     and waits for the user to click anywhere in the window to close it.
     """
-    window = rg.TurtleWindow()
 
-    alan = rg.SimpleTurtle()
+
+window = rg.TurtleWindow()
+
+
+alan = rg.SimpleTurtle()
 alan.pen = rg.Pen('blue', 30)
-    alan.paint_bucket = rg.PaintBucket('yellow')
+alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16)
-    al.begin_fill()
-    alan.circle(25)
-    alan.end_fill()
+alan.backward(3 * (47 + 16))
+alan.begin_fill()
+alan.circle(25)
+alan.end_fill()
 
-    forward(200)
+alan.forward(200)
 
-    window.close_on_mouse_click()
-
-# -----------------------------------------------------------------------------
+window.close_on_mouse_click()
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
