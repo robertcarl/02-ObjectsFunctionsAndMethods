@@ -36,16 +36,16 @@ import math
 def main():
     """ Calls the other functions in this module to demo them. """
     print_math()
-    turle_fn()
+    turtle_fun()
 
 
-def print_math:
+def print_math():
     """ Prints some calculated values. """
     x = math.cos(math.pi)
     print(x)
 
-    y = sin(pi)
-    print('The sine of PI' is y)
+    y = math.sin(math.pi)
+    print('The sine of PI is y')
 
 
 def turtle_fun():
