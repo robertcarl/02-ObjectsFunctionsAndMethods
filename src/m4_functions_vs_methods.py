@@ -159,7 +159,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -169,30 +169,10 @@ def try_functions():
     ###########################################################################
 
 
-carl = rg.SimpleTurtle('triangle')
-carl.pen = rg.Pen('blue', 5)
-carl.speed = 5
-jose = rg.SimpleTurtle('circle')
-jose.pen = rg.Pen('green', 5)
-jose.speed = 5
-jared = rg.SimpleTurtle('square')
-jared.pen = rg.Pen('red', 5)
-jared.speed = 5
+jump_and_move_turtle(200, 100, 300, 30)
+jump_and_move_turtle(100, 200, 0, 0)
+jump_and_move_turtle(-50, 50, 100, 100)
 
-carl.pen_up()
-carl.go_to(rg.Point(200, 100))
-carl.pen_down()
-carl.go_to(rg.Point(300, 30))
-
-jose.pen_up()
-jose.go_to(rg.Point(100, 200))
-jose.pen_down()
-jose.go_to(rg.Point(0, 0))
-
-jared.pen_up()
-jared.go_to(rg.Point(-50, 50))
-jared.pen_down()
-jared.go_to(rg.Point(100, 100))
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
@@ -238,8 +218,22 @@ def try_methods_and_functions():
     ###########################################################################
 
 
+jerome = rg.SimpleTurtle('turtle')
+jerome.pen = rg.Pen('blue', 5)
+jerome.backward(150)
+jerome.speed = 1
+draw_many_squares(jerome, 2, 100, 30)
+jerome.speed = 5
+jerome.pen = rg.Pen('red', 5)
+draw_many_squares(jerome, 10, 50, 15)
+jerome.speed = 100
+jerome.pen = rg.Pen('red', 35)
+draw_many_squares(jerome, 8, 300, 60)
+jerome.pen = rg.Pen('black', 3)
+jerome.backward(200)
+jerome.draw_circle(30)
+jerome.draw_square(50)
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
-
 main()
