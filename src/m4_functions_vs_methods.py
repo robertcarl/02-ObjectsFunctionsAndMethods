@@ -171,19 +171,28 @@ def try_functions():
 
 carl = rg.SimpleTurtle('triangle')
 carl.pen = rg.Pen('blue', 5)
+carl.speed = 5
 jose = rg.SimpleTurtle('circle')
-jose.pen =rg.Pen('green', 5)
+jose.pen = rg.Pen('green', 5)
+jose.speed = 5
 jared = rg.SimpleTurtle('square')
 jared.pen = rg.Pen('red', 5)
-
+jared.speed = 5
 
 carl.pen_up()
-carl.go_to(x1, y1)
+carl.go_to(rg.Point(200, 100))
 carl.pen_down()
-carl.go_to(300, 30)
+carl.go_to(rg.Point(300, 30))
 
 jose.pen_up()
-jose.go_to(100, 200)
+jose.go_to(rg.Point(100, 200))
+jose.pen_down()
+jose.go_to(rg.Point(0, 0))
+
+jared.pen_up()
+jared.go_to(rg.Point(-50, 50))
+jared.pen_down()
+jared.go_to(rg.Point(100, 100))
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
