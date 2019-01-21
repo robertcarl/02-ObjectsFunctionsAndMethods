@@ -4,11 +4,11 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Drew Roberts.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -136,10 +136,17 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
+
+drew = rg.SimpleTurtle('turtle')
+drew.pen = rg.Pen('brown', 5)
+drew.forward(150)
+drew.left(90)
+drew.forward(50)
+drew.backward(100)
 
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
@@ -162,6 +169,21 @@ def try_functions():
     ###########################################################################
 
 
+carl = rg.SimpleTurtle('triangle')
+carl.pen = rg.Pen('blue', 5)
+jose = rg.SimpleTurtle('circle')
+jose.pen =rg.Pen('green', 5)
+jared = rg.SimpleTurtle('square')
+jared.pen = rg.Pen('red', 5)
+
+
+carl.pen_up()
+carl.go_to(x1, y1)
+carl.pen_down()
+carl.go_to(300, 30)
+
+jose.pen_up()
+jose.go_to(100, 200)
 ###############################################################################
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
